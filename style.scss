@@ -1,0 +1,144 @@
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+// Primary
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+// Neutral
+$very-dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+// font size
+// - Weights: 200, 400, 600
+$body-font-size: 1.5rem;
+$font-stack: 'Poppins', sans-serif;
+
+html{box-sizing: border-box;font-size: 62.5%;}
+*, *::after, *::before{box-sizing: inherit;}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-size: $body-font-size;
+    font-family: $font-stack;
+    display: flex;
+    justify-content: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__header {
+    width: 90%;
+    margin: 5rem 0;
+    text-align: center;
+
+    .section__title,
+    .section__sub-title {
+        margin: 0;
+        font-size: 2.5rem;
+        color: $very-dark-blue;
+    }
+
+    .section__title {
+        font-weight: 200;
+    }
+
+    .section__description {
+        margin: 0 auto;
+        min-width: 40rem;
+        color: $grayish-blue;
+        padding: 0 2rem;
+    }
+}
+
+.col {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.col-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    box-shadow: 0px 5px 10px 0px hsla(234, 12%, 34%, .25);
+    border-radius: .5rem;
+    width: 33rem;
+
+    .card__title {
+        margin: 0;
+        font-size: 2rem;
+        color: $very-dark-blue;
+    }
+
+    .card__description { 
+        margin-top: 0;
+        margin-bottom: 3.5rem;
+        color: $grayish-blue;
+    }
+
+    img {
+        align-self: flex-end;
+    }
+}
+
+.card + .card {
+    margin-top: 3rem;
+}
+
+.super {
+    border-top: 4px solid $cyan;
+}
+
+.calc {
+    border-top: 4px solid $blue;
+}
+
+.team {
+    border-top: 4px solid $red;
+}
+
+.karma {
+    border-top: 4px solid $orange;
+}
+
+@media (min-width: 1000px) {
+    .section__title,
+    .section__sub-title {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .section__description {
+        max-width: 50rem;
+    }
+
+    .col {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .col-item + .col-item {
+        margin-left: 3rem;
+    }
+}
